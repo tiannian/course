@@ -29,6 +29,13 @@ css: unocss
 
 ---
 
+## Standard of Ethereum
+
+- EIP: Ethereum Improvement Proposal
+- ERC: Ethereum Request for Comment
+
+---
+
 ## Account Type
 
 - EOA 外部账户
@@ -105,7 +112,20 @@ css: unocss
 
 ### 签名聚合
 
+具有线性特性的签名可以进行聚合。聚合后整个Bundler只需要验证一个签名。
+
+支持算法：
+
+- Schnorr
+- BLS
+
+---
+
+## 一个新的交易池
+
 ### 原子操作
+
+
 
 --- 
 
