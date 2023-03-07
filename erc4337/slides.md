@@ -116,14 +116,19 @@ css: unocss
 
 ## 架构与方案
 
-![EIP4337](https://user-images.githubusercontent.com/10502431/223316557-27b3e312-d2d7-42f6-b5a9-0b1eaf0c0a8f.png)
+<br/>
+
+<img style="width: 400px; align: center" src="https://user-images.githubusercontent.com/10502431/223316557-27b3e312-d2d7-42f6-b5a9-0b1eaf0c0a8f.png"/>
 
 - 内存池
 - 一组合约
+- 合约作为账户
 
 ---
 
 ## 一个新的交易池
+
+<br/>
 
 ### 签名聚合
 
@@ -133,6 +138,27 @@ css: unocss
 
 - Schnorr
 - BLS
+
+---
+
+### Example
+
+<br/>
+
+1. SecretKey: $x = random()$
+2. Generator: $G \in E_{p}$
+2. PublicKey: $X = xG$
+2. Random: $r = random()$
+4. Hash: $h = Hash(Message)$
+3. Signature: $(R, s) = (rG, r + hx)$
+7. Verify: $sG = rG + hxG = R + hX$
+
+<br/>
+
+### 聚合
+
+1. N个公钥求聚合公钥: $X_s = \sum_{n-1}^0 X_n$
+1. N个签名求聚合签名: $(R_s, s_s) = (\sum^1_{n-1}R_n, \sum^1_{n-1}s_n)$
 
 ---
 
